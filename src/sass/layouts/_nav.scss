@@ -1,0 +1,115 @@
+.nav {
+	position: fixed;
+	top: 0;
+	height: 70px;
+	width: 100%;
+	padding: 0 140px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 2;
+	///////
+	opacity: 1;
+	&__bg {
+		position: fixed;
+		top: 0px;
+		left: 0;
+		height: 70px;
+		width: 100%;
+		background-color: #0e0e0ec5;
+		backdrop-filter: blur(1px);
+		z-index: 1;
+		opacity: 0;
+	}
+	&__ul {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+	&__logo {
+		transform: translateY(25%);
+		font-size: 20px;
+		text-align: center;
+		p {
+			display: block;
+			text-transform: uppercase;
+			font-family: $font3;
+			font-weight: 600;
+			letter-spacing: 1px;
+			color: $white;
+			&:nth-of-type(1) {
+				font-size: 1.1em;
+				letter-spacing: 1.5px;
+				line-height: 30%;
+			}
+			&:nth-of-type(2) {
+				display: inline-block;
+				font-size: 0.6em;
+				font-weight: 400;
+			}
+			&:nth-of-type(3) {
+				display: inline-block;
+				color: $blue;
+				font-size: 0.6em;
+				font-weight: 400;
+			}
+		}
+	}
+	&__ul-item {
+		text-transform: uppercase;
+		font-size: 1.1em;
+		font-weight: 300;
+		letter-spacing: 1px;
+		padding-right: 60px;
+	}
+	&__ul-a {
+		font-family: $font2;
+		color: $white;
+		transition: 0.4s;
+		&--click {
+			animation: click 1s linear;
+		}
+		@media (hover: hover) {
+			&:hover {
+				color: $blue;
+			}
+			&--active {
+				color: $blue;
+				&:hover {
+					color: lighten($blue, 15%);
+				}
+			}
+		}
+	}
+	&__ul-hamburger {
+		width: 27px;
+		text-align: center;
+		color: $white;
+		font-size: 1.8em;
+		cursor: pointer;
+		display: none;
+		transition: 0.4s;
+		@media (hover: hover) {
+			&:hover {
+				color: $blue;
+			}
+		}
+		&--click {
+			animation: click 1s linear;
+		}
+	}
+}
+@keyframes click {
+	0% {
+		color: $white;
+	}
+	20% {
+		color: $blue;
+	}
+	50% {
+		color: $blue;
+	}
+	100% {
+		color: $blue;
+	}
+}
