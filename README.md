@@ -1,1 +1,1 @@
-# PodstawyTechnologiiWebowych
+# Podstawy Technologii Webowych
